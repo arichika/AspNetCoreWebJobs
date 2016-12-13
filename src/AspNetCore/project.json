@@ -63,7 +63,6 @@
   "scripts": {
     "prepublish": [ "bower install", "dotnet bundle" ],
     "postpublish": [
-      "dotnet build ../MyWebJobs/ --configuration Release --no-dependencies",
       "dotnet publish ../MyWebJobs/ -o %publish:OutputPath%/App_Data/jobs/triggered/MyWebJobs/",
       "dotnet publish-iis --publish-folder %publish:OutputPath% --framework %publish:FullTargetFramework%"
     ]
